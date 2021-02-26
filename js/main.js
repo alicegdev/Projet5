@@ -19,12 +19,12 @@ let burgerQuiz = new Generateur (["Qui est le plus vieux :  ", "Questionnaire de
  * affiche la boîte de dialogue, permet à l'utilisateur de choisir combien de citations il veut voir, ainsi que le générateur, puis affiche les citations dans le HTML
  */
 function afficher(){
-    espaceCitations.innerHTML = "";
+    espaceCitations.innerHTML="";
     let fois = prompt("Combien de citations ou de questions souhaitez-vous voir ?");
     let choix = prompt("Quelles citations souhaitez-vous lire ? Pour les faux proverbes confucéens, tapez 1. Pour les questions du Burger Quiz, tapez 2.");
 
-    if (fois > 10) {
-        alert('Veuillez entrer un nombre de fois égal ou inférieur à 10.');
+    if (fois > 5) {
+        alert('Veuillez entrer un nombre de fois égal ou inférieur à 5.');
     }
     else{
     
@@ -37,25 +37,13 @@ function afficher(){
                 case "2":
                 espaceCitations.innerHTML += (burgerQuiz.combinaisons()) + "<br />";
                     break;
-
+                
                 default:
-                    alert('Veuillez entrer un choix valide');
+                    break;
         }
         espaceCitations.innerHTML += "<br />";
     }
     } 
-   
 } 
 
-/**
- * demande si l'utilisateur souhaite voir d'autres citations et relance la fonction "afficher" si OK
- */
 
-function demandeRepetitions() {
-  let onRepart = confirm("Souhaitez-vous voir d'autres citations ? Si oui, cliquez sur OK. Si non, cliquez sur Annuler.");
-  if (onRepart == true) {
-      afficher();
-  } else {
-      return;
-  }
-}
