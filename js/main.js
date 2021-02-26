@@ -7,7 +7,6 @@ let cliquezPourCommencer = document.getElementById('cliquez_pour_commencer');
  */
 cliquezPourCommencer.addEventListener('click', () => {
   afficher();
-  demandeRepetitions();
 });
 
 let proverbesConfuceens = new Generateur (["La sagesse du sage ", "La lueur des étoiles ", "La patience de la tortue ", "La fureur du tigre "], ["rend plus sage ", "transforme en colline ", "change en prince ", "sommeille dans "], ["même les plus fous.", "le plus vil des crapauds.", "la plus haute montagne.", "le doute le plus abyssal."]);
@@ -22,9 +21,8 @@ let burgerQuiz = new Generateur (["Qui est le plus vieux :  ", "Questionnaire de
 function afficher(){
     espaceCitations.innerHTML = "";
     let fois = prompt("Combien de citations ou de questions souhaitez-vous voir ?");
-    // faire un parseInt
     let choix = prompt("Quelles citations souhaitez-vous lire ? Pour les faux proverbes confucéens, tapez 1. Pour les questions du Burger Quiz, tapez 2.");
-    // faire un parseInt
+
     if (fois > 10) {
         alert('Veuillez entrer un nombre de fois égal ou inférieur à 10.');
     }
