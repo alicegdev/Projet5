@@ -14,7 +14,8 @@ class Generateur {
     let randomPremierBoutDePhrase = this.premierBoutDePhrase[Math.floor(Math.random() * this.premierBoutDePhrase.length)];
     let randomDeuxiemeBoutDePhrase= this.deuxiemeBoutDePhrase[Math.floor(Math.random() * this.deuxiemeBoutDePhrase.length)];
     let randomTroisiemeBoutDePhrase = this.troisiemeBoutDePhrase[Math.floor(Math.random() * this.troisiemeBoutDePhrase.length)];
-    return (randomPremierBoutDePhrase) + (randomDeuxiemeBoutDePhrase) + (randomTroisiemeBoutDePhrase);
+    let result = (randomPremierBoutDePhrase) + (randomDeuxiemeBoutDePhrase) + (randomTroisiemeBoutDePhrase);
+    return result;
     
     }
 }
