@@ -21,7 +21,7 @@ boutonArrêter.addEventListener("click", () => {
     containerCitations.style.display = "none";
 });
 
-let proverbesConfuceens = new Generateur(
+let proverbesSages = new Generateur(
     [
         "La sagesse du sage ",
         "La lueur des étoiles ",
@@ -87,11 +87,11 @@ function afficher() {
         alert("Veuillez entrer un nombre de fois égal ou inférieur à 5.");
     } else {
         let choix = prompt(
-            "Quelles citations souhaitez-vous lire ? Pour les faux proverbes confucéens, tapez 1. Pour les questions du Burger Quiz, tapez 2."
+            "Quelles citations souhaitez-vous lire ? Pour les faux proverbes de sages, tapez 1. Pour les questions du Burger Quiz, tapez 2."
         );
         switch (parseInt(choix)) {
             case 1:
-                ecrireDansLEspaceCitations(espaceCitations, parseInt(fois), proverbesConfuceens);
+                ecrireDansLEspaceCitations(espaceCitations, parseInt(fois), proverbesSages);
                 break;
 
             case 2:
